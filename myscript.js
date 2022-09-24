@@ -9,24 +9,31 @@ function playRound(playerSelection, computerSelection){
     RoundWinner = ""
         if (playerSelection === computerSelection ){
             RoundWinner = "It's a draw ! "
+            console.log("Player: ",playerSelection, " ", "Computer : ",computerSelection + " It's a draw !")
         }
         else if (playerSelection === "scissors" && computerSelection === "rock"){
             RoundWinner = "Computer wins"
+            console.log("Player: ",playerSelection, " ", "Computer : ",computerSelection + " Computer wins")
         }
         else if (playerSelection === "scissors" && computerSelection === "paper"){
             RoundWinner = "Player wins"
+            console.log("Player: ",playerSelection, " ", "Computer : ",computerSelection + " Player wins")
         }
         else if  (playerSelection === "paper" && computerSelection === "rock"){
             RoundWinner = "Player wins"
+            console.log("Player: ",playerSelection, " ", "Computer : ",computerSelection + " Player wins")
         }
         else if  (playerSelection === "paper" && computerSelection === "scissors"){
             RoundWinner = "Computer wins"
+            console.log("Player: ",playerSelection, " ", "Computer : ",computerSelection + " Computer wins")
         }
         else if  (playerSelection === "rock" && computerSelection === "scissors"){
             RoundWinner = "Player wins"
+            console.log("Player: ",playerSelection, " ", "Computer : ",computerSelection + " Player wins")
         }
         else if  (playerSelection === "rock" && computerSelection === "paper"){
             RoundWinner = "Computer wins"
+            console.log("Player: ",playerSelection, " ", "Computer : ",computerSelection + " Computer wins")
         }
         return RoundWinner
     }
@@ -34,7 +41,14 @@ function playRound(playerSelection, computerSelection){
 function game(){
     let player_count=0
     let computer_count=0
-    for (let i = 0; i<5;i++){
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach((button) =>{
+        button.addEventListener('click', ()=> {
+            playRound(button.id, getComputerChoice())
+        })
+    })
+    /*for (let i = 0; i<5;i++){
         playerSelection = prompt("Rock, Paper, Scissors : ")
         computerSelection = getComputerChoice()
         RoundWinner = playRound(playerSelection, computerSelection)
@@ -59,7 +73,7 @@ function game(){
     }
     else{
         console.log("It's a draw ")
-    }
+    }*/
 }
 
 game()
