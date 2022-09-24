@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+}
+header{
+    background-color: rgb(51, 111, 166);
+    display: flex;
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 6px;
+    margin: 4px;
+    gap: 45px;
+}
+main{
+    background-color: rgb(104, 136, 216);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 6px;
+    margin: 4px;
+}
+.Choices{
+    background-color: rgb(104, 136, 216);
+    border: 2px solid;
+    border-radius: 6px;
+    margin: 10px;
+    padding: 15px;
+}
+button{
+    width: 100px;
+    padding: 4px;
+    margin: 5px 10px;
+    background-color: rgb(193, 223, 66);
+    border: 3px solid yellow ;
+    border-radius: 7px;
+    cursor:pointer;
+}
+.result{
+    display: flex;
+    background-color: lightgrey;
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 50px;
+}
+#player_choice,#computer_choice,#winner{
+    background-color: lightgrey;
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 50px;
+}
+.box_score{
+    display: flex;
+    background-color: rgb(155, 184, 60);
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 8px;
+    margin: 20px;
+    gap: 75px;
+}
+#player_box,#computer_box{
+    display: flex;
+    background-color: rgb(154, 194, 221);
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 30px;
+}
