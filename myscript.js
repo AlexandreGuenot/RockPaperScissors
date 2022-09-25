@@ -118,7 +118,3 @@ function playRound(playerSelection, computerSelection){
         }
         return RoundWinner
     }
-
-function game(){
-    playRound
-}
